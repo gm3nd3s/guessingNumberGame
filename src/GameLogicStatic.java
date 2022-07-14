@@ -1,9 +1,7 @@
-public class GameLogic {
+public class GameLogicStatic {
 
-    public GameLogic(){
 
-    }
-    public String playGame(String playerOneName, String playerTwoName, int numberOfBestOfGames){
+    public static String playGame(String playerOneName, String playerTwoName, int numberOfBestOfGames){
         Game game = new Game();
         Player player1 = new Player(playerOneName);
         Player player2 = new Player(playerTwoName);
@@ -19,13 +17,13 @@ public class GameLogic {
         };
         return (bestOfGames == player1.getScore()? player1.getName() : player2.getName()) + "Won the game with " + bestOfGames + " match points in a BestOf " + numberOfBestOfGames + " matches!" ;
     }
-    public void playersReplay(Player player1, Player player2){
+    public static void playersReplay(Player player1, Player player2){
         player1.setNumber();
         player2.setNumber();
     }
 
 
-    public String results(Game game, Player player1, Player player2){
+    public static String results(Game game, Player player1, Player player2){
         boolean isThereAWinner = false;
         while (!isThereAWinner){
 
